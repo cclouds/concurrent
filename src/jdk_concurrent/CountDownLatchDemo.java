@@ -1,5 +1,6 @@
 package jdk_concurrent;
 
+import java.util.Random;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -16,7 +17,7 @@ public class CountDownLatchDemo implements Runnable{
 	public void run() {
   
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(new Random().nextInt(10)*1000);
 			System.out.println("check complete");
 			latch.countDown();
 		} catch (InterruptedException e) {
