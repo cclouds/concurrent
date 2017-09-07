@@ -14,6 +14,7 @@ public class TryLock implements Runnable {
 
 	public static ReentrantLock lock2 = new ReentrantLock();
 
+	
 	int lock;
 
 	public TryLock(int lock) {
